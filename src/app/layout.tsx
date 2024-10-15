@@ -23,8 +23,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="ko" className={`${pretendard.variable}`}>
-			<body className={pretendard.className}>
+		<html
+			lang="ko"
+			className={`${pretendard.variable} flex justify-center bg-gray-600`}
+		>
+			<body className={`${pretendard.className} w-[375px] bg-white`}>
 				<Header />
 				{children}
 			</body>
