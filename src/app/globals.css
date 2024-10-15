@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --colorPrimary: #f3ecff;
+    --colorSecondary: #8446ff;
+    --colorGrayPrimary: #383940;
+    --colorGraySecondary: #676975;
+}
+
