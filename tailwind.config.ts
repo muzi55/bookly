@@ -13,6 +13,8 @@ const config: Config = {
 				secondary: "#8446ff",
 				"input-text": "#2c2c2c",
 				gray: {
+					gray1: "#f4f5f8",
+					gray4: "#b5b8c2",
 					primary: "#383940",
 					secondary: "#676975",
 				},
