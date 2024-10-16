@@ -10,7 +10,14 @@ function HeaderButton() {
 	const router = useRouter();
 
 	const handleBack = () => {
-		router.back();
+		const referrer = document.referrer;
+		const currentDomain = window.location.origin;
+
+		if (referrer && referrer.startsWith(currentDomain)) {
+			return router.back();
+		}
+
+		router.push("/");
 	};
 
 	if (path === "/") return null;
