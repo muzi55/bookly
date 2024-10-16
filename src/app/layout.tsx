@@ -2,6 +2,7 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Suspense } from "react";
 
 import Header from "./components/header/Header";
 import SearchBar from "./components/search/SearchBar";
@@ -35,7 +36,9 @@ export default function RootLayout({
 
 				<main className="flex-1 w-[310px] py-3.5 m-auto">
 					<div className="mt-4">
-						<SearchBar />
+						<Suspense fallback={"로딩중...."}>
+							<SearchBar />
+						</Suspense>
 					</div>
 					{children}
 				</main>
