@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 
 import Header from "./components/header/Header";
 
+
 const pretendard = localFont({
 	src: "./fonts/PretendardVariable.woff2",
 	display: "swap",
@@ -31,7 +32,8 @@ export default function RootLayout({
 				className={`${pretendard.className} flex flex-col w-[375px] bg-white h-[100dvh]`}
 			>
 				<Header />
-				<main className="flex-1">{children}</main>
+				
+				<main className="flex-1 w-[310px] m-auto">{children}</main>
 				<footer>푸터</footer>
 			</body>
 		</html>

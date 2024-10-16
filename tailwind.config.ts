@@ -9,9 +9,13 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#f3ecff",
-				secondary: "#8446ff",
+				primary: "#8446ff",
+				secondary: "#f3ecff",
+				"input-text": "#2c2c2c",
 				gray: {
+					gray1: "#f4f5f8",
+					gray4: "#b5b8c2",
+					gray5: "#8c8f98",
 					primary: "#383940",
 					secondary: "#676975",
 				},

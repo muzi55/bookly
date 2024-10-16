@@ -9,3 +9,9 @@
     --colorGraySecondary: #676975;
 }
 
+
+@layer components {
+    .transition-03 {
+        transition: all 0.3s;
+    }
+  }
