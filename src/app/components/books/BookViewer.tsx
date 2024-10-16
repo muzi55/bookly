@@ -14,7 +14,7 @@ function BookViewer({ books }: BookViewerProps) {
 			{books.map(book => {
 				return (
 					<li key={book.id}>
-						<Link className="flex gap-3.5  h-[109px]" href={`${book.id}`}>
+						<Link className="flex gap-3.5  h-[109px]" href={`/book/${book.id}`}>
 							<div className="min-w-20">
 								<Image
 									src={book.coverImgUrl}
