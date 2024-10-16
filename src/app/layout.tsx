@@ -25,11 +25,14 @@ export default function RootLayout({
 	return (
 		<html
 			lang="ko"
-			className={`${pretendard.variable} flex justify-center bg-gray-600`}
+			className={`${pretendard.variable} flex justify-center bg-gray-600 `}
 		>
-			<body className={`${pretendard.className} w-[375px] bg-white`}>
+			<body
+				className={`${pretendard.className} flex flex-col w-[375px] bg-white h-[100dvh]`}
+			>
 				<Header />
-				{children}
+				<main className="flex-1">{children}</main>
+				<footer>푸터</footer>
 			</body>
 		</html>
 	);

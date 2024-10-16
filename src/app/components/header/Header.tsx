@@ -4,7 +4,7 @@ import HeaderButton from "./HeaderButton";
 
 export default function Header() {
 	return (
-		<header className="relative h-[44px] px-1.5">
+		<header className="relative h-[44px] px-1.5 border-black border-b ">
 			<HeaderButton />
 			<Link
 				href="/"
