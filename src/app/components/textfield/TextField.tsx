@@ -1,12 +1,14 @@
 "use client";
 import React, { useState } from "react";
 
+import IconButton from "../common/IconButton";
 import TextInput from "./TextInput";
 
 interface ITextFieldProps {
 	placeholder: string;
 	value: string;
 	onChange: React.ChangeEventHandler<HTMLInputElement>;
+	onClick: ()=>void;
 }
 
 type IsFocus = "focus" | "blur";
@@ -14,6 +16,7 @@ export default function TextField({
 	placeholder,
 	value,
 	onChange,
+	onClick,
 }: ITextFieldProps) {
 	const [isFocused, setFocused] = useState<boolean>(false);
 
@@ -26,15 +29,24 @@ export default function TextField({
 	const handleFocuses = (type: IsFocus) => {
 		setFocused(type === "focus");
 	};
-	console.log("isFocused", isFocused);
 
 	return (
 		<div
-			className={`bg-gray-gray1 border ${borderColor} rounded-rounded-2`}
+			className={`flex bg-gray-gray1 border ${borderColor} rounded-rounded-2 transition-03`}
 			onFocus={() => handleFocuses("focus")}
 			onBlur={() => handleFocuses("blur")}
 		>
 			<TextInput placeholder={placeholder} value={value} onChange={onChange} />
+
+			{value && (
+				<IconButton
+					src="/icon/delete.svg"
+					alt="입력 삭제"
+					width={18}
+					height={18}
+					onClick={onClick}
+				/>
+			)}
 		</div>
 	);
 }

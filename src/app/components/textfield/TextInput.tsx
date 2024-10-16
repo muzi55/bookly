@@ -11,7 +11,7 @@ export default function TextInput({
 	return (
 		<input
 			type="text"
-			className={`block text-body w-full outline-none p-[14px] text-input-text caret-primary bg-transparent`}
+			className={`w-full block text-body outline-none p-[14px] text-input-text caret-primary bg-transparent`}
 			onChange={onChange}
 			value={value}
 			placeholder={placeholder}
