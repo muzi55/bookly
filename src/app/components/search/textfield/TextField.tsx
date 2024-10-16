@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 
-import IconButton from "../common/IconButton";
+
 import TextInput from "./TextInput";
+import IconButton from "../../common/IconButton";
 
 interface ITextFieldProps {
 	placeholder: string;
