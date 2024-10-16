@@ -17,13 +17,20 @@ export default function TextField({
 }: ITextFieldProps) {
 	const [isFocused, setFocused] = useState<boolean>(false);
 
+	const borderColor = isFocused
+		? "border-primary"
+		: !value
+			? "border-gray-gray4"
+			: "border-gray-gray5";
+
 	const handleFocuses = (type: IsFocus) => {
 		setFocused(type === "focus");
 	};
+	console.log("isFocused", isFocused);
 
 	return (
 		<div
-			className={`bg-gray-gray1 border-gray-gray4 rounded-rounded-2`}
+			className={`bg-gray-gray1 border ${borderColor} rounded-rounded-2`}
 			onFocus={() => handleFocuses("focus")}
 			onBlur={() => handleFocuses("blur")}
 		>
