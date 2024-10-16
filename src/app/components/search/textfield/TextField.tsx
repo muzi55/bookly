@@ -1,15 +1,14 @@
 "use client";
 import React, { useState } from "react";
 
-
-import TextInput from "./TextInput";
 import IconButton from "../../common/IconButton";
+import TextInput from "./TextInput";
 
 interface ITextFieldProps {
 	placeholder: string;
 	value: string;
 	onChange: React.ChangeEventHandler<HTMLInputElement>;
-	onClick: ()=>void;
+	onClick: () => void;
 }
 
 type IsFocus = "focus" | "blur";

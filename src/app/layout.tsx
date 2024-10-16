@@ -32,7 +32,7 @@ export default function RootLayout({
 			>
 				<Header />
 
-				<main className="flex-1 w-[310px] m-auto">{children}</main>
+				<main className="flex-1 w-[310px] py-3.5 m-auto">{children}</main>
 				<footer>푸터</footer>
 			</body>
 		</html>

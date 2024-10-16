@@ -4,7 +4,7 @@ import React from "react";
 interface IconButtonProps {
 	src: string;
 	alt: string;
-	onClick: ()=>void;
+	onClick: () => void;
 	width: number;
 	height: number;
 }

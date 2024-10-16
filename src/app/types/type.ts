@@ -12,13 +12,12 @@ export interface BookData {
 	publisher: string;
 	description: string;
 	coverImgUrl: string;
-  }
-  
-  export interface ReviewData {
+}
+
+export interface ReviewData {
 	id: number;
 	content: string;
 	author: string;
 	createdAt: string;
 	bookId: number;
-  }
-  
+}
