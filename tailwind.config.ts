@@ -75,6 +75,9 @@ const config: Config = {
 			boxShadow: {
 				boxShadow: "0px 5px 20px 0px rgba(0,0,0,0.15)",
 			},
+			fontFamily: {
+				pretendard: ["var(--font-pretendard)"],
+			},
 			borderRadius: {
 				"rounded-1": "0.25rem",
 				"rounded-2": "0.5rem",
