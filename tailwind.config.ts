@@ -11,6 +11,7 @@ const config: Config = {
 			colors: {
 				primary: "#f3ecff",
 				secondary: "#8446ff",
+				"input-text": "#2c2c2c",
 				gray: {
 					primary: "#383940",
 					secondary: "#676975",
