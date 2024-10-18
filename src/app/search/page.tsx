@@ -1,5 +1,8 @@
 import React from "react";
 
+import BookViewer from "../components/books/BookViewer";
+import type { BookData } from "../types/type";
+
 interface ISearchParams {
 	searchParams: {
 		q?: string;
@@ -7,15 +10,15 @@ interface ISearchParams {
 }
 
 export default async function Page({ searchParams }: ISearchParams) {
-	// const path = useSearchParams().get("q");
-
 	const queryString = searchParams.q;
-	console.log(queryString);
 	const res = await fetch(
 		`${process.env.NEXT_PUBLIC_API_SERVER_URL}/book/search?q=${queryString}`,
 		{ cache: "force-cache" },
 	);
-	const data = await res.json();
-	console.log(data);
-	return <div>'search' </div>;
+	const data: BookData[] = await res.json();
+	return (
+		<div className="mt-4">
+			<BookViewer books={data} />
+		</div>
+	);
 }
